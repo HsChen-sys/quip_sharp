@@ -64,7 +64,7 @@ class QuantizedLinear(nn.Module):
                             int(in_features / (codesz * packsz)),
                             dtype=dtype_from_str(idx_dtype)))
 
-        self.register_buffer("codebook_id", torch.tensor(0))
+        self.register_buffer("codebook_id", torch.tensor(17))
         self.register_buffer("SU", torch.ones(in_features,
                                               dtype=torch.float16))
         self.register_buffer("SV", torch.ones(out_features,
